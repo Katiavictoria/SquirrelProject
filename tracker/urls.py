@@ -2,10 +2,12 @@ from django.urls import path
 
 from . import views
 
-
 urlpatterns = [
-    path('', views.index),
-    path('list/', views.list_pets),
-    path('<int:pet_id>/', views.get_pet),
+    path('map/', views.map, name='map'),
+    path('sightings/', views.list, name='list'),
+    path('sightings/add/', views.create, name='create'),
+    path('sightings/stats/', views.stats, name='stats'),
+    path('sightings/<str:unique_squirrel_id>/', views.update, name='update'),
+    path('sightings/<str:unique_squirrel_id>/delete', views.delete, name='delete'),
 ]
 
