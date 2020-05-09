@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+from django.db import models
+
 class Squirrel(models.Model):
     Longitude = models.CharField(max_length=30)
     Latitude = models.CharField(max_length=30)
