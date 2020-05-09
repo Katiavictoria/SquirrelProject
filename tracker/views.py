@@ -29,7 +29,7 @@ context = {
         'form' : form,
     }
 
-return render(request, 'tracker/add.html', context)
+    return render(request, 'tracker/add.html', context)
 
 def sightings_stats(request):
     all_sightings = Sightings.objects.all()
