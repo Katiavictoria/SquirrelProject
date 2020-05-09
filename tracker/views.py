@@ -24,7 +24,7 @@ def sightings_add(request):
 
     form = SightingsForm()
 
-context = {
+    context = {
 
         'form' : form,
     }
