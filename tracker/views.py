@@ -30,6 +30,14 @@ def sightings_add(request):
     }
 
     return render(request, 'tracker/add.html', context)
+def sightings_edit(request, unique_squirrel_id):
+    squirrel = Sightings.objects.filter(unique_squirrel_id=unique_squirrel_id).first()
+    form = SightingsForm(instance=squirrel)
+    context = {
+        'form' : form,
+    }
+    return render(request, 'tracker/edit.html', context)
+
 
 def sightings_stats(request):
     all_sightings = Sightings.objects.all()
